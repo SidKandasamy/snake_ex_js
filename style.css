@@ -1,0 +1,40 @@
+/* https://www.w3schools.com/css/css3_variables.asp */
+
+/* custom-name	Required. The custom property's name (must start with two dashes)*/
+
+:root{
+    --primary-color:#b30500; 
+    --secondary-color: #00FF00;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_bold.woff);
+    font-weight: bold;
+  }
+
+body{
+    height: 100vh; /* vh the height of the view */
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top left, var(--primary-color) 50%, var(--secondary-color) 50%);
+    font-family: fantasy;
+}
+
+canvas{
+    background: black;
+    border: 3px white solid;
+    box-shadow: 2px;
+}
+
+h1{
+    margin:0;
+    font-weight: bold;
+}
+
+.game{
+    text-align: end;
+    color:whitesmoke;
+}
