@@ -25,8 +25,16 @@ body{
 
 canvas{
     background: black;
+    border: 3px white solid;
+    box-shadow: 2px;
 }
 
 h1{
     margin:0;
+    font-weight: bold;
+}
+
+.game{
+    text-align: end;
+    color:whitesmoke;
 }
