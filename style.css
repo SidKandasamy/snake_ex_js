@@ -1,0 +1,14 @@
+/* https://www.w3schools.com/css/css3_variables.asp */
+
+/* custom-name	Required. The custom property's name (must start with two dashes)*/
+
+:root{
+    --primary-color:#b30500; 
+    --secondary-color: #00FF00;
+}
+
+body{
+    height: 100vh; /* vh the height of the view */
+    margin:0;
+    background: linear-gradient(to top left, --primary-color 50%, --secondary-color 100%);
+}
