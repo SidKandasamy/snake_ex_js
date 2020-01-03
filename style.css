@@ -10,5 +10,8 @@
 body{
     height: 100vh; /* vh the height of the view */
     margin:0;
-    background: linear-gradient(to top left, --primary-color 50%, --secondary-color 100%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top left, var(--primary-color) 50%, var(--secondary-color) 50%);
 }
