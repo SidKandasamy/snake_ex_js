@@ -7,6 +7,12 @@
     --secondary-color: #00FF00;
 }
 
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_bold.woff);
+    font-weight: bold;
+  }
+
 body{
     height: 100vh; /* vh the height of the view */
     margin:0;
@@ -14,4 +20,13 @@ body{
     justify-content: center;
     align-items: center;
     background: linear-gradient(to top left, var(--primary-color) 50%, var(--secondary-color) 50%);
+    font-family: fantasy;
+}
+
+canvas{
+    background: black;
+}
+
+h1{
+    margin:0;
 }
