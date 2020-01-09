@@ -33,6 +33,22 @@ let apple ={
     y: grid * 10,
 }
 
+// loop
+
+// Update function, slows down framerate
+function Update(){
+    requestAnimationFrame(Update) //runs 60fps 
+
+    if(++count > 4){ //this sets the time fps to 15 as 60/4 =  15  
+        return;
+    }
+
+    count = 0; 
+
+}
+
+//this starts game
+requestAnimationFrame(Update) 
 
 
 
