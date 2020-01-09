@@ -28,6 +28,10 @@ let snake = {
 
 }
 
+let apple ={ 
+    x: grid * 10, //this keep the apples starting position 5 away from the snake
+    y: grid * 10,
+}
 
 
 
