@@ -48,7 +48,13 @@ function Update(){
     //clear canavs after every frame before we start drawing
     ctx.clearRect(0,0, canvas.width, canvas.height); //clears the whole canvas
 
+
     //Snake
+
+
+    // this moves the snake.x and adds velocity, which is 1 grid block every frame
+    snake.x += snake.vx;
+    snake.y += snake.vy;
 
     snake.cells.unshift({x:snake.x, y:snake.y});
 
