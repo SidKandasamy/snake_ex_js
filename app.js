@@ -39,7 +39,7 @@ let apple ={
 function Update(){
     requestAnimationFrame(Update) //runs 60fps 
 
-    if(++count > 4){ //this sets the time fps to 15 as 60/4 =  15  
+    if(++count < 4){ //this sets the time fps to 15 as 60/4 =  15  
         return;
     }
 
