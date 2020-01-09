@@ -45,6 +45,22 @@ function Update(){
 
     count = 0; 
 
+    //clear canavs after every frame before we start drawing
+    ctx.clearRect(0,0, canvas.width, canvas.height); //clears the whole canvas
+
+    //Snake
+
+    snake.cells.unshift({x:snake.x, y:snake.y});
+
+    if(snake.cells.length > snake.maxCells){
+        snake.cells.pop()
+    }
+
+    ctx.fillStyle = primary;
+    snake.cells.forEach(function(cells,index){
+        ctx.fillRect(cells.x,cells.y, grid-1,grid-1);
+    });
+
 }
 
 //this starts game
