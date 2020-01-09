@@ -12,6 +12,22 @@ const grid = 32; //size of each cell in the canvas
 
 let count = 0; //use for framerate
 
+let snake = {
+    x: grid * 5, // where the snake starts, 5 blocks of the grid in
+    y: grid * 5,
+
+    //velocity of snake
+
+    vx: grid,
+    vy: 0, //this ensures the snake does not move diagonal
+
+    cells: [], //this increases with the amount the snake eats
+
+    maxCells: 4
+
+
+}
+
 
 
 
