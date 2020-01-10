@@ -56,6 +56,11 @@ function Update(){
     snake.x += snake.vx;
     snake.y += snake.vy;
 
+
+    if(snake.x < 0){
+        snake.x = canvas.width - grid; //if the snake goes too far left, itll be spawned on the right side using canvas.width
+    } else if (snake.x >= canvas.width) //if the snake goes further than the canvas width bring it back to the start
+
     snake.cells.unshift({x:snake.x, y:snake.y});
 
     if(snake.cells.length > snake.maxCells){
