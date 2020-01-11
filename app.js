@@ -75,12 +75,37 @@ function Update(){
         snake.cells.pop()
     }
 
-    ctx.fillStyle = primary;
+    //draw apple
+
+    ctx.fillStyle = secondary;
+    ctx.fillRect(apple.x,apple.y, grid-1,grid-1); // -1 for apple so its the same shape as one block of the snake
+
+
+
+    ctx.fillStyle = primary; // color of snake
     snake.cells.forEach(function(cells,index){
-        ctx.fillRect(cells.x,cells.y, grid-1,grid-1);
+        ctx.fillRect(cells.x,cells.y, grid-1,grid-1); //-1 is the slight gap between the blocks
     });
 
 }
+
+//function for movement of snake
+
+document.addEventListener("keydown",function(evt){
+    if(evt.which === 37 && snake.vx === 0){ //.which is which key, and 37 is the left key. and checks if we are moving on the x axis
+        snake.vx = -grid; //- is used to minus the speed, so not going backwards on the grid
+        snake.vy = 0;
+    } else if (evt.which === 38 && snake.vy === 0){ //38 is up key
+        snake.vy = -grid; 
+        snake.vx = 0;
+    } else if (evt.which === 39 && snake.vx === 0){ //39 is right key
+        snake.vx = grid;
+        snake.vy = 0;
+    } else if (evt.which === 40 && snake.vy === 0){ //40 is down key
+        snake.vy = grid; 
+        snake.vx = 0; 
+    }
+});
 
 //this starts game
 requestAnimationFrame(Update) 
