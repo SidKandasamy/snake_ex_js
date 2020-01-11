@@ -93,17 +93,17 @@ function Update(){
 
 document.addEventListener("keydown",function(evt){
     if(evt.which === 37 && snake.vx === 0){ //.which is which key, and 37 is the left key. and checks if we are moving on the x axis
-        snake.xy = -grid;
+        snake.vx = -grid; //- is used to minus the speed, so not going backwards on the grid
         snake.vy = 0;
     } else if (evt.which === 38 && snake.vy === 0){ //38 is up key
-        snake.vy = -grid;
+        snake.vy = -grid; 
         snake.vx = 0;
-    } else if (evt.which === 39 && snake.vx === 0){ //39 is up key
+    } else if (evt.which === 39 && snake.vx === 0){ //39 is right key
         snake.vx = grid;
-        snake.xy = 0;
-    } else if (evt.which === 40 && snake.vy === 0){
-        snake.vy = -grid;
-        snake.vx = 0;
+        snake.vy = 0;
+    } else if (evt.which === 40 && snake.vy === 0){ //40 is down key
+        snake.vy = grid; 
+        snake.vx = 0; 
     }
 });
 
