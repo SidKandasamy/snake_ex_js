@@ -92,8 +92,12 @@ function Update(){
 //function for movement of snake
 
 document.addEventListener("keydown",function(evt){
-    if(evt.which === 37 && snake.vx ===0){ //.which is which key, and 37 is the left key. and checks if we are even moving on the x axis
-    
+    if(evt.which === 37 && snake.vx === 0){ //.which is which key, and 37 is the left key. and checks if we are moving on the x axis
+        snake.xy = -grid;
+        snake.vy = 0;
+    } else if (evt.which === 38 && snake.vy === 0){ //38 is up arrow
+        snake.vy = -grid;
+        snake.vy = 0;
     }
 });
 
