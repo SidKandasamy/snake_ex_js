@@ -78,7 +78,7 @@ function Update(){
     //draw apple
 
     ctx.fillStyle = secondary;
-    ctx.fillRect(apple.x,apple.y, grid-1,grid-1); 
+    ctx.fillRect(apple.x,apple.y, grid-1,grid-1); // -1 for apple so its the same shape as one block of the snake
 
 
 
@@ -88,6 +88,14 @@ function Update(){
     });
 
 }
+
+//function for movement of snake
+
+document.addEventListener("keydown",function(evt){
+    if(evt.which === 37 && snake.vx ===0){ //.which is which key, and 37 is the left key. and checks if we are even moving on the x axis
+    
+    }
+});
 
 //this starts game
 requestAnimationFrame(Update) 
