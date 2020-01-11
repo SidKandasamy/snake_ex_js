@@ -75,9 +75,16 @@ function Update(){
         snake.cells.pop()
     }
 
-    ctx.fillStyle = primary;
+    //draw apple
+
+    ctx.fillStyle = secondary;
+    ctx.fillRect(apple.x,apple.y, grid-1,grid-1); 
+
+
+
+    ctx.fillStyle = primary; // color of snake
     snake.cells.forEach(function(cells,index){
-        ctx.fillRect(cells.x,cells.y, grid-1,grid-1);
+        ctx.fillRect(cells.x,cells.y, grid-1,grid-1); //-1 is the slight gap between the blocks
     });
 
 }
