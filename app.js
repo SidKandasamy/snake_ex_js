@@ -85,6 +85,14 @@ function Update(){
     ctx.fillStyle = primary; // color of snake
     snake.cells.forEach(function(cells,index){
         ctx.fillRect(cells.x,cells.y, grid-1,grid-1); //-1 is the slight gap between the blocks
+
+        if (cells.x === apple.x && cells.y === apple.y){
+            snake.maxCells++;
+
+            apple.x = getRandomInt(0,24) * grid;
+            apple.y = getRandomInt(0,14) * grid; ///
+
+        }
     });
 
 }
