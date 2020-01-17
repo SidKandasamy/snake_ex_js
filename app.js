@@ -98,7 +98,7 @@ function Update(){
 }
 
 function getRandomInt(min,max){
-    return Math.floor(Math.random() * (max-min)) + min;
+    return Math.floor(Math.random() * (max-min)) + min; //this gives apple a random position 
 }
 
 //function for movement of snake
