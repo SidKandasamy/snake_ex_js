@@ -97,6 +97,10 @@ function Update(){
 
 }
 
+function getRandomInt(min,max){
+    return Math.floor(Math.random() * (max-min)) + min;
+}
+
 //function for movement of snake
 
 document.addEventListener("keydown",function(evt){
