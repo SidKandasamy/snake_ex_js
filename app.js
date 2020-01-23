@@ -93,10 +93,12 @@ function Update(){
             apple.y = getRandomInt(0,14) * grid; ///
 
         }
+        
+        //crash logic
 
         for (let i = index + 1; i < snake.cells.length; i++){ // this looks at the first cell in the array (any part of the snake not the head) checks if head collides
-            if(cells.x === snake.cells[i].x && cells.y === snake.cells[i].y){
-                    
+            if(cells.x === snake.cells[i].x && cells.y === snake.cells[i].y){ 
+                    window.location.reload() 
             }
         }
     });
